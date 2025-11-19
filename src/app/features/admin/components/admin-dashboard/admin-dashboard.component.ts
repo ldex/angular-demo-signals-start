@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 
 interface DashboardStat {
   label: string;
@@ -17,7 +17,7 @@ interface RecentActivity {
 
 @Component({
   selector: 'app-admin-dashboard',
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './admin-dashboard.component.html'
 })
 export class AdminDashboardComponent {

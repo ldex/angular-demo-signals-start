@@ -1,12 +1,12 @@
 import { Component, Input, Output, EventEmitter, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { RouterModule } from '@angular/router';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Product } from '../../../../models/product.model';
 
 @Component({
   selector: 'app-product-form',
-  imports: [CommonModule, RouterModule, ReactiveFormsModule],
+  imports: [RouterModule, ReactiveFormsModule],
   templateUrl: './product-form.component.html'
 })
 export class ProductFormComponent {

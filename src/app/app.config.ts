@@ -1,10 +1,11 @@
 import { provideHttpClient, withInterceptors } from "@angular/common/http";
-import { ApplicationConfig } from "@angular/core";
+import { ApplicationConfig, provideZoneChangeDetection } from "@angular/core";
 import {
   PreloadAllModules,
   provideRouter,
   withComponentInputBinding,
   withPreloading,
+  withViewTransitions
 } from "@angular/router";
 import { routes } from "./app.routes";
 import { authInterceptor } from "./interceptors/auth.interceptor";
@@ -15,8 +16,10 @@ export const appProviders = [
   provideRouter(
     routes,
     withComponentInputBinding(),
-    withPreloading(PreloadAllModules)
+    withPreloading(PreloadAllModules),
+    withViewTransitions()
   ),
+  provideZoneChangeDetection()
 ];
 
 export const appConfig: ApplicationConfig = {
