@@ -27,9 +27,10 @@ export class ProductListContainerComponent implements OnInit {
   private authService = inject(AuthService);
 
   products$!: Observable<Product[]>;
-  authState$ = this.authService.getAuthState();
   error: string | null = null;
   loading: boolean = false;
+
+  authState$ = this.authService.getAuthState();
 
   constructor() {
     this.loadProducts();

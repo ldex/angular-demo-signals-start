@@ -24,10 +24,11 @@ export class ProductListComponent {
   @Output() addToCart = new EventEmitter<number>();
   @Output() refresh = new EventEmitter<void>();
 
-  private _products: Product[] = [];
   searchQuery = '';
   selectedCategory = '';
   sortBy = 'name';
+
+  private _products: Product[] = [];
   filteredProducts: Product[] = [];
   categories: string[] = [];
 

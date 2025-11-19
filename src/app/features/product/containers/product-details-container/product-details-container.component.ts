@@ -29,9 +29,10 @@ export class ProductDetailsContainerComponent {
   private authService = inject(AuthService);
 
   product$!: Observable<Product>;
-  authState$ = this.authService.getAuthState();
   error: string | null = null;
   loading: boolean = false;
+
+  authState$ = this.authService.getAuthState();
 
   @Input({ transform: numberAttribute })
   set id(productId: number)
